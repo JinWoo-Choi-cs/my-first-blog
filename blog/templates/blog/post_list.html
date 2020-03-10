@@ -3,10 +3,46 @@
         <title>Django Girls blog</title>
     </head>
     <body>
+        <hr>
+        <div >
+            <h2>~Params Query Set~</h2>
+            <hr>
+            <p class="model">{{Posts}}</p>
+        </div>
+        <hr>
+        <div>
+            <h2>~Params For Each~</h2>
+            <hr>
+            <div class="model">
+                {% for post in Posts %}
+                <div>
+                    <p>published: {{ post.published_date }}</p>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                    <hr>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+    <style>
+        .model 
+        {
+            color:black;
+            background-color: #dbfdfc;
+        }
+    </style>
+</html>
+
+<!-- region-s 이전 posts
+<html>
+    <head>
+        <title>Django Girls blog</title>
+    </head>
+    <body>
         <div>
             <h1><a href="">Django Girls Blog</a></h1>
         </div>
-
         <div>
             <p>published: 14.06.2014, 12:14</p>
             <h2><a href="">My First post</a></h2>
@@ -18,11 +54,26 @@
             <h2><a href="">My Second post</a></h2>
             <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
         </div>
+        <hr>
+        <div class="models">
+            <hr><hr>
+            <h2>~Params~</h2>
+            <pre>
+                {{Posts}}
+                {{Posts}}
+            </pre>
+        </div>
     </body>
     <style>
         #abc
         {
             color: blue;
         }
+        .models
+        {
+            color:yellow;
+            background-color: black;
+        }
     </style>
 </html>
+region-e 이전 posts -->
