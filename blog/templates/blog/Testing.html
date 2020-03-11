@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>CSS Selector Test</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        
+        <!-- 내부   -->
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+        <style>
+            .model p
+            {
+                color:black;
+                background-color: #dbfdfc;
+            }
+            div p 
+            {
+                color : blue;
+            }
+            p 
+            {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+       <div>
+           div1
+       </div>
+       <div>
+            div2
+       </div>
+       <p>
+            p1 maybe red
+       </p>
+       <div>
+           <p>
+               div->p1 maybe blue
+           </p>
+       </div>
+    </body>
+</html>

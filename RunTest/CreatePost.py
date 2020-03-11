@@ -47,6 +47,8 @@ from django.shortcuts import render
 #Post.objects.filter(published_date__lte=timezone.now()).order_by('-created_date')
 
 # region-e Testing Done
-
 print()
+
+print (Post.objects.all()[0].pk)
+print (Post.objects.all()[1].pk)
 
